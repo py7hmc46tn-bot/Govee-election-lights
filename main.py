@@ -19,7 +19,22 @@ COLOURS = {
 }
 
 def get_election_colour():
-    return "democrat"
+    response = requests.get(RESULTS_URL, timeout=20)
+    response.raise_for_status()
+    results = response.json()
+
+    house = results["house"]["control"].lower()
+    senate = results["senate"]["control"].lower()
+
+    valid = {"democrat", "republican"}
+
+    if house not in valid or senate not in valid:
+        return "unknown"
+
+    if house == senate:
+        return house
+
+    return "purple"
 
 
 def get_devices():
