@@ -14,7 +14,7 @@ COLOURS = {
     "democrat": 255,
     "republican": 16711680,
     "purple": 8388736,
-    "unknown": 16777215
+    "unknown": 16777215,
     "unavailable":16777215
 }
 
