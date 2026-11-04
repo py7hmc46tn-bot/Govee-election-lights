@@ -26,4 +26,3 @@ jobs:
         run: python main.py
         env:
           GOVEE_API_KEY: ${{ secrets.GOVEE_API_KEY }}
-          ELECTION_JSON_URL: ${{ secrets.ELECTION_JSON_URL }}
