@@ -4,7 +4,6 @@ import uuid
 import requests
 
 GOVEE_KEY = os.environ["GOVEE_API_KEY"]
-RESULTS_URL = os.environ["ELECTION_JSON_URL"]
 
 HEADERS = {
     "Govee-API-Key": GOVEE_KEY,
@@ -16,6 +15,7 @@ COLOURS = {
     "republican": 16711680,
     "purple": 8388736,
     "unknown": 16777215
+    "unavailable":16777215
 }
 
 def get_election_colour():
